@@ -1,14 +1,14 @@
 <template>
   <div id="home">
-    <h1>camera</h1>
+    <h3 class="title">人脸识别</h3>
     <div class="video-wrapper">
-      <video id="video" autoPlay>
+      <div class="shade"></div>
+      <video id="video" width="300" height="300" autoPlay>
         <track default kind="captions" srcLang="en" src="" />
         您的浏览器不支持 video 标签。
       </video>
     </div>
-
-    <canvas id="canvas" width="420px" height="200px" />
+    <div class="tip"><strong>请眨眼</strong></div>
   </div>
 </template>
 
@@ -39,11 +39,35 @@ export default class HomeView extends Vue {
 </script>
 <style lang="less">
 #home{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .video-wrapper{
-    #video{
-      width: 800px;
-      height: 500px;
+    margin-top: 50px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    .shade{
+      border-radius: 200px;
+      border-color: white;
+      position: absolute;
+      z-index: 10;
+      width: 300px;
+      height: 300px;
     }
+    #video{
+      border-radius: 200px;
+      object-fit: fill;
+    }
+  }
+  .tip{
+    margin-top: 50px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 15px
   }
 
 }
