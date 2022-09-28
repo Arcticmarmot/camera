@@ -3,7 +3,7 @@
     <h3 class="title">人脸识别</h3>
     <div class="video-wrapper">
       <div class="shade-left"></div>
-      <video id="video" width="300" height="150" autoPlay>
+      <video id="video" width="300" autoPlay>
         <track default kind="captions" srcLang="en" src="" />
         您的浏览器不支持 video 标签。
       </video>
@@ -61,7 +61,7 @@ export default class HomeView extends Vue {
     }
     .shade-right{
       left: 225px;
-      top: 0px;
+      top: 0;
       background: white;
       border-color: white;
       position: absolute;
