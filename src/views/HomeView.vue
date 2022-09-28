@@ -56,9 +56,9 @@ export default class HomeView extends Vue {
     .shade{
       z-index: -1;
       position: absolute;
-      width: 150px;
-      height: 150px;
-      border-radius: 100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 500px;
       box-shadow: 0 0 0 1000px white;
     }
     #video{
