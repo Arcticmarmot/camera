@@ -3,7 +3,7 @@
     <h3 class="title">人脸识别</h3>
     <div class="video-wrapper">
       <div class="shade"></div>
-      <video id="video" autoPlay playsinline muted >
+      <video id="video" width="500" autoPlay muted >
         <track default kind="captions" srcLang="en" src="" />
         您的浏览器不支持 video 标签。
       </video>
