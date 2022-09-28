@@ -2,12 +2,11 @@
   <div id="home">
     <h3 class="title">人脸识别</h3>
     <div class="video-wrapper">
-      <div class="shade-left"></div>
-      <video id="video" width="300" autoPlay>
+      <div class="shade"></div>
+      <video id="video" autoPlay playsinline muted >
         <track default kind="captions" srcLang="en" src="" />
         您的浏览器不支持 video 标签。
       </video>
-      <div class="shade-right"></div>
     </div>
     <div class="tip"><strong>请眨眼</strong></div>
   </div>
@@ -48,30 +47,23 @@ export default class HomeView extends Vue {
   align-items: center;
   .video-wrapper{
     margin-top: 50px;
-    position: relative;
     width: 300px;
     height: 300px;
-    border-radius: 200px;
-    .shade-left{
-      background: white;
-      border-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .shade{
+      z-index: -1;
       position: absolute;
-      width: 75px;
+      width: 150px;
       height: 150px;
-    }
-    .shade-right{
-      left: 225px;
-      top: 0;
-      background: white;
-      border-color: white;
-      position: absolute;
-      width: 75px;
-      height: 150px;
+      border-radius: 100px;
+      box-shadow: 0 0 0 1000px white;
     }
     #video{
-      z-index: 10;
-      border-radius: 200px;
-      object-fit: fill;
+      z-index: -2;
+      width: 500px;
     }
   }
   .tip{
